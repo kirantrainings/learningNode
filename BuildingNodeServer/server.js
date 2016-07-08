@@ -1,17 +1,11 @@
-//http
-//fs
-//streams
-var http = require('http');
-var port = 1339;
+/*var config = require('./config/configuration');
+var httpServer = require("./server/httpServerCode");
 
-http.createServer(function (req, res) {
+httpServer.listen(config.port);
 
-    res.writeHead(200, {
-        'Content-Type': 'text/html'
-    });
+console.log(config.connectionString);
+console.log("server listening at port http://localhost:" + config.port);*/
 
-    res.end("<h1>Hello Guys Welcome to Nodejs</h1>");
-
-}).listen(port);
-
-console.log('Our awesome web server running at http://localhost:' + port);
+var mySever = require("./server/httpServerCode");
+mySever.listen("3000");
+console.log("server listening at port http://localhost:3000");
